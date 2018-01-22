@@ -20,8 +20,8 @@ Writing e a program that controls the traffic signals for a four-way intersectio
 
 6. At the instant the light turns from "green" to "red", a car may not start moving to cross the intersection; whether that car just arrived at the intersection or was waiting at that intersection.
 
-7. The output should be the number of cars that are waiting at the intersection in each direction at each second, for the first 20 seconds. Do not make the program wait 20 seconds to produce the output: this is only a simulation, so print the output when it's ready.
+7. The output will be the number of cars that are waiting at the intersection in each direction at each second, for the first 20 seconds. 
 
 
 
-This program will give the output according the rules.
+This program will give the output according the aboce rules for 20 seconds.
