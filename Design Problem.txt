@@ -1,0 +1,58 @@
+﻿public static void main(String[] args)
+  {
+    int n = 0;
+		int s = 0;
+		int e = 0;
+		int w = 0;
+		//false means red signal and true means green signal
+                //s = south , e = East, w = west, 
+
+		boolean nSignal = true;
+		boolean eSignal = false;
+		boolean bothRed = false;
+		boolean waitTime = true;
+		String lastRed = "n";
+		int i=0;
+		int time = 0;
+		int j = 0;
+		while(time<=20){
+			System.out.println(time +": N = "+n+"; S="+s+"; E="+e+"; W="+w );
+			n++;
+			s++;
+			e++;
+			w++;
+			if(j==1){
+				i=1;
+				if(lastRed!=null && lastRed.equalsIgnoreCase("e")){
+					eSignal = false;
+					nSignal = true;
+					lastRed = "n";	
+                  	n++;
+                  s++;
+				}else if(lastRed!=null && lastRed.equalsIgnoreCase("n")){
+					eSignal = true;
+					nSignal = false;
+					lastRed = "e";				
+                  e++;
+                  w++;
+				}
+              j--;
+			}else if(i==3){
+				nSignal = false;
+				eSignal = false;
+				j = 1;
+			}else{
+				i++;
+			}
+			
+			if(nSignal){
+				n--;
+				s--;
+			}
+			if(eSignal){
+				e--;
+				w--;
+			}
+			time++;
+		}
+}
